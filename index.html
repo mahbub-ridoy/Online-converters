@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="FileForge is a polished browser workspace for compressing images, editing PDFs, removing backgrounds, converting videos, building resumes, creating QR codes, and beautifying screenshots."
+    >
+    <meta name="theme-color" content="#111827">
+    <title>FileForge | Online File Tools</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <a class="brand" href="#top" aria-label="FileForge home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M7 5.5h12.7L25 10.8v15.7H7z" fill="currentColor" opacity=".18"/>
+            <path d="M19.7 5.5v5.3H25" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M10.8 16.6h10.4M10.8 21h6.9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>FileForge</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#tools">Tools</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#security">Security</a>
+      </nav>
+
+      <a class="header-action" href="#tools">Explore tools</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Seven everyday file workflows</p>
+          <h1>FileForge</h1>
+          <p class="hero-lede">
+            A polished online workspace for compressing, cleaning, converting, exporting, and sharing files without bouncing between separate apps.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="button button-primary" href="#tools">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              View tools
+            </a>
+            <a class="button button-secondary" href="#workflow">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              </svg>
+              See workflow
+            </a>
+          </div>
+
+          <dl class="hero-stats" aria-label="Product highlights">
+            <div>
+              <dt>7</dt>
+              <dd>tool modes</dd>
+            </div>
+            <div>
+              <dt>ZIP</dt>
+              <dd>batch export</dd>
+            </div>
+            <div>
+              <dt>PDF</dt>
+              <dd>ready output</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-media" aria-label="FileForge workspace preview">
+          <img src="assets/workspace-preview.svg" alt="Preview of the FileForge workspace with upload queue, tool controls, and export panel.">
+        </div>
+      </section>
+
+      <section class="tool-marquee" aria-label="Available tools">
+        <span>Image Compressor</span>
+        <span>PDF Tools</span>
+        <span>Background Remover</span>
+        <span>Video Converter</span>
+        <span>QR Studio</span>
+        <span>Resume Builder</span>
+        <span>Screenshot Beautifier</span>
+      </section>
+
+      <section class="section tools-section" id="tools">
+        <div class="section-heading">
+          <p class="eyebrow">Tool library</p>
+          <h2>Everything useful, grouped in one clean surface.</h2>
+          <p>
+            Each tool is designed around the same simple rhythm: drop files, tune output, preview the result, and export what you need.
+          </p>
+        </div>
+
+        <div class="tools-layout">
+          <div class="tool-grid" role="list" aria-label="FileForge tools">
+            <button class="tool-card is-active" type="button" data-tool="image" role="listitem">
+              <span class="tool-icon icon-image" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 6.5h14v11H5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M8 15l3-3.2 2.3 2.4 1.9-2.1L19 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9.3" cy="9.4" r="1.1" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Image Compressor</strong>
+                <small>Quality targets, before/after preview, ZIP downloads.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="pdf" role="listitem">
+              <span class="tool-icon icon-pdf" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 3.8h7.7L19 8.1v12.1H7z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M14.7 3.8v4.3H19M9.7 12h6.6M9.7 15.3h6.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>PDF Tools App</strong>
+                <small>Merge, split, compress, image conversion, page exports.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="background" role="listitem">
+              <span class="tool-icon icon-cleanup" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 17.7c2.2-4.7 9.8-4.7 12 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                  <circle cx="12" cy="9.4" r="3" fill="none" stroke="currentColor" stroke-width="1.9"/>
+                  <path d="M4.6 5.2l14.8 13.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Background Remover</strong>
+                <small>Cleanup, solid backgrounds, profile and product sizes.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="video" role="listitem">
+              <span class="tool-icon icon-video" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5.5 7.5h9v9h-9z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M14.5 10l4.7-2.4v8.8L14.5 14z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Video Compressor</strong>
+                <small>Resize, MP4/WebM conversion, GIFs, audio extract.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="qr" role="listitem">
+              <span class="tool-icon icon-qr" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 5h5v5H5zM14 5h5v5h-5zM5 14h5v5H5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M14 14h2.5v2.5H19M14 19h1.5M19 14v1.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>QR Code Studio</strong>
+                <small>Links, Wi-Fi, vCards, payments, logos, SVG/PDF.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="resume" role="listitem">
+              <span class="tool-icon icon-resume" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 4.5h10v15H7z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M9.8 8.3h4.4M9.8 11.8h5.8M9.8 15.2h3.9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Resume Builder</strong>
+                <small>Clean templates, live preview, polished PDF export.</small>
+              </span>
+            </button>
+
+            <button class="tool-card" type="button" data-tool="screenshot" role="listitem">
+              <span class="tool-icon icon-shot" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 7.5h14v8.8H5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                  <path d="M9 19h6M12 16.3V19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>
+                <strong>Screenshot Beautifier</strong>
+                <small>Device frames, shadows, social sizes, PNG export.</small>
+              </span>
+            </button>
+          </div>
+
+          <aside class="tool-preview" aria-live="polite">
+            <div class="preview-topline">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="preview-mode">Image Compressor</span>
+            </div>
+
+            <div class="drop-zone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 16V5M8 9l4-4 4 4M5 18.5h14" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span id="preview-action">Batch image upload</span>
+            </div>
+
+            <div class="comparison">
+              <div>
+                <span>Before</span>
+                <strong id="preview-before">14.8 MB</strong>
+              </div>
+              <div>
+                <span>After</span>
+                <strong id="preview-after">3.1 MB</strong>
+              </div>
+            </div>
+
+            <div class="meter-stack" aria-label="Tool output indicators">
+              <div class="meter-row">
+                <span id="meter-label-one">Quality</span>
+                <i style="--value: 82%"></i>
+              </div>
+              <div class="meter-row">
+                <span id="meter-label-two">Size saved</span>
+                <i style="--value: 71%"></i>
+              </div>
+              <div class="meter-row">
+                <span id="meter-label-three">Export ready</span>
+                <i style="--value: 94%"></i>
+              </div>
+            </div>
+
+            <div class="export-list">
+              <span id="export-one">compressed-images.zip</span>
+              <span id="export-two">preview-report.pdf</span>
+              <span id="export-three">settings.json</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">One pattern</p>
+          <h2>Built for quick file chores and careful exports.</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-step">
+            <span>01</span>
+            <h3>Drop files</h3>
+            <p>Batch uploads keep image sets, PDFs, videos, resumes, QR assets, and screenshots grouped by project.</p>
+          </article>
+          <article class="workflow-step">
+            <span>02</span>
+            <h3>Tune output</h3>
+            <p>Purpose-built controls expose quality, dimensions, background color, page ranges, frame size, and export type.</p>
+          </article>
+          <article class="workflow-step">
+            <span>03</span>
+            <h3>Preview and export</h3>
+            <p>Before/after panels and file queues make final checks simple before downloading ZIP, PNG, SVG, PDF, GIF, or MP4.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section security-section" id="security">
+        <div class="security-copy">
+          <p class="eyebrow">Browser-first foundation</p>
+          <h2>Designed for speed, privacy, and real-world file limits.</h2>
+          <p>
+            The landing page frames FileForge as a client-first toolkit: lightweight operations happen in-browser, while heavier AI and video tasks can be routed to dedicated workers later.
+          </p>
+        </div>
+
+        <div class="security-points" aria-label="Technical foundations">
+          <div>
+            <strong>Fast local flow</strong>
+            <span>Compress, preview, and export common assets without slow account setup.</span>
+          </div>
+          <div>
+            <strong>Scalable heavy tools</strong>
+            <span>Background removal and video conversion have space for model/API or worker-backed processing.</span>
+          </div>
+          <div>
+            <strong>Export discipline</strong>
+            <span>Every tool leads to clear output formats instead of vague conversion promises.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div>
+          <p class="eyebrow">Ready for the next build step</p>
+          <h2>Turn the landing page into the full converter suite.</h2>
+        </div>
+        <a class="button button-primary" href="#tools">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Review tools
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>FileForge</span>
+      <span>Online file tools landing page</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
