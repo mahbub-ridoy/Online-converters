@@ -486,6 +486,7 @@ h1 span {
 .icon-qr { color: #946300; background: #fff2cf; }
 .icon-resume { color: #187042; background: #e4f8eb; }
 .icon-shot { color: #b54b18; background: #ffecdd; }
+.icon-converts { color: #0f4f46; background: #dff7ef; }
 
 .workflow {
   border-top: 1px solid var(--line);
