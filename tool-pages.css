@@ -476,6 +476,11 @@ input[type="color"]::-webkit-color-swatch {
   margin-top: 6px;
 }
 
+.quick-action-row {
+  display: flex;
+  margin-top: -4px;
+}
+
 .value-pill {
   display: inline-flex;
   align-items: center;
@@ -523,6 +528,50 @@ input[type="color"]::-webkit-color-swatch {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.mini-preview {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dbe3ee;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .04);
+}
+
+.mini-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+  background: #f8fafc;
+}
+
+.mini-preview span,
+.mini-preview strong {
+  display: block;
+  padding: 10px 12px 0;
+}
+
+.mini-preview span {
+  overflow: hidden;
+  color: #334155;
+  font-size: .9rem;
+  font-weight: 760;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mini-preview strong {
+  padding-top: 4px;
+  padding-bottom: 12px;
+  color: var(--muted);
+  font-size: .82rem;
 }
 
 .background-tool .bg-preview-grid {
