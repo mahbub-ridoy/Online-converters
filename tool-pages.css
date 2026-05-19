@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --page: #d7d7d5;
+  --page: #ffffff;
   --paper: #ffffff;
   --ink: #090909;
   --muted: #6b6b6b;
@@ -12,7 +12,7 @@
   --red: #ff684f;
   --radius: 8px;
   --frame-radius: 14px;
-  --shadow: 0 30px 72px rgba(0, 0, 0, .16);
+  --shadow: none;
   --soft-shadow: 0 14px 32px rgba(19, 28, 34, .1);
   --max: 1280px;
 }
@@ -53,13 +53,13 @@ button,
 }
 
 .app-frame {
-  width: min(var(--max), calc(100% - 56px));
-  min-height: calc(100vh - 82px);
-  margin: 36px auto 46px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
   background: var(--paper);
-  border: 1px solid rgba(255, 255, 255, .76);
-  border-radius: var(--frame-radius);
+  border: 0;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -69,7 +69,9 @@ button,
   align-items: center;
   gap: 24px;
   min-height: 82px;
-  padding: 0 clamp(18px, 4vw, 44px);
+  width: min(var(--max), calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -124,29 +126,31 @@ button,
 
 .tool-main {
   display: grid;
-  gap: 28px;
-  padding: clamp(22px, 4vw, 46px);
+  gap: clamp(26px, 4vw, 48px);
+  padding: 0 0 clamp(42px, 5vw, 70px);
 }
 
 .tool-hero {
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(280px, .5fr);
-  gap: 24px;
+  grid-template-columns: minmax(260px, .42fr) minmax(0, .58fr);
+  gap: clamp(18px, 3vw, 34px);
   align-items: stretch;
-  min-height: 250px;
-  padding: clamp(24px, 5vw, 46px);
+  width: 100%;
+  min-height: calc(100vh - 82px);
+  padding: clamp(28px, 5vw, 58px) max(32px, calc((100vw - var(--max)) / 2 + 32px));
   background:
     radial-gradient(circle, rgba(0, 0, 0, .055) 1px, transparent 1.6px),
     linear-gradient(180deg, #fff, #fbfbf8);
   background-size: 9px 9px, auto;
-  border: 1px solid #deded9;
-  border-radius: 26px;
+  border-bottom: 1px solid #deded9;
+  border-radius: 0;
 }
 
 .tool-title {
   display: grid;
-  align-content: center;
-  max-width: 760px;
+  align-content: start;
+  max-width: 560px;
+  padding-top: clamp(6px, 2vw, 24px);
 }
 
 .eyebrow {
@@ -166,43 +170,24 @@ p {
 }
 
 h1 {
-  margin-bottom: 18px;
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  font-weight: 520;
-  line-height: .96;
+  margin-bottom: 12px;
+  font-size: clamp(2.25rem, 4.8vw, 4.3rem);
+  font-weight: 580;
+  line-height: 1;
   letter-spacing: 0;
 }
 
 .tool-title p {
-  max-width: 62ch;
+  max-width: 46ch;
   margin-bottom: 0;
   color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.18rem);
-}
-
-.hero-card {
-  display: grid;
-  align-content: center;
-  gap: 15px;
-  padding: 22px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--soft-shadow);
-}
-
-.hero-card strong {
-  font-size: 1.25rem;
-}
-
-.hero-card span {
-  color: var(--muted);
+  font-size: clamp(.98rem, 1.4vw, 1.08rem);
 }
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(300px, .42fr) minmax(0, .58fr);
-  gap: 18px;
+  width: min(var(--max), calc(100% - 64px));
+  margin: 0 auto;
 }
 
 .panel,
@@ -217,7 +202,12 @@ h1 {
 
 .panel,
 .result-panel {
-  padding: clamp(18px, 3vw, 26px);
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.tool-hero .panel {
+  align-self: start;
+  min-height: 0;
 }
 
 .panel h2,
@@ -502,12 +492,13 @@ input[type="color"] {
 
 @media (max-width: 980px) {
   .app-frame {
-    width: min(100% - 28px, var(--max));
-    margin-top: 18px;
+    width: 100%;
+    margin-top: 0;
   }
 
   .tool-header {
     grid-template-columns: 1fr auto;
+    width: min(100% - 28px, var(--max));
   }
 
   .tool-nav {
@@ -519,15 +510,23 @@ input[type="color"] {
     grid-template-columns: 1fr;
   }
 
-  .hero-card {
-    min-height: 160px;
+  .tool-hero {
+    min-height: 0;
+    padding: 28px max(14px, calc((100vw - var(--max)) / 2 + 14px)) 34px;
+  }
+
+  .workspace {
+    width: min(100% - 28px, var(--max));
+  }
+
+  .tool-title {
+    max-width: 760px;
   }
 }
 
 @media (max-width: 640px) {
   .tool-header {
     min-height: 72px;
-    padding: 0 14px;
   }
 
   .brand {
@@ -550,16 +549,15 @@ input[type="color"] {
   }
 
   .tool-main {
-    padding: 14px;
+    padding-bottom: 44px;
   }
 
   .tool-hero {
-    padding: 28px 18px;
-    border-radius: 20px;
+    padding: 26px 14px 30px;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 15vw, 3.8rem);
+    font-size: clamp(2rem, 10.5vw, 3rem);
   }
 
   .control-row.inline,
