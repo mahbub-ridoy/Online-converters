@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --page: #d7d7d5;
+  --page: #ffffff;
   --paper: #ffffff;
   --ink: #070707;
   --muted: #737373;
@@ -11,7 +11,7 @@
   --yellow: #fff083;
   --green: #3bbf78;
   --red: #ff684f;
-  --shadow: 0 34px 80px rgba(0, 0, 0, .18);
+  --shadow: none;
   --soft-shadow: 0 18px 42px rgba(23, 31, 38, .12);
   --radius: 8px;
   --frame-radius: 14px;
@@ -48,12 +48,13 @@ textarea {
 }
 
 .site-frame {
-  width: min(var(--max), calc(100% - 72px));
-  margin: clamp(18px, 4vw, 82px) auto 42px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
   overflow: hidden;
   background: var(--paper);
-  border: 1px solid rgba(255, 255, 255, .74);
-  border-radius: var(--frame-radius);
+  border: 0;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -63,7 +64,9 @@ textarea {
   align-items: center;
   gap: 28px;
   min-height: 86px;
-  padding: 0 clamp(22px, 4vw, 50px);
+  width: min(var(--max), calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0;
 }
 
 .brand,
@@ -138,16 +141,18 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: clamp(560px, 56vw, 760px);
-  margin: 0 12px 22px;
-  padding: clamp(60px, 8vw, 118px) clamp(18px, 4vw, 56px);
+  min-height: clamp(520px, 52vw, 700px);
+  width: 100%;
+  margin: 0 0 22px;
+  padding: clamp(54px, 7vw, 96px) clamp(18px, 4vw, 56px);
   overflow: hidden;
   background:
     radial-gradient(circle, rgba(0, 0, 0, .055) 1px, transparent 1.6px),
     linear-gradient(180deg, #ffffff, #fbfbf8);
   background-size: 9px 9px, auto;
-  border: 1px solid #dbdbd8;
-  border-radius: 28px;
+  border-top: 1px solid #dbdbd8;
+  border-bottom: 1px solid #dbdbd8;
+  border-radius: 0;
 }
 
 .hero::before,
@@ -217,11 +222,11 @@ p {
 }
 
 h1 {
-  max-width: 11ch;
-  margin-bottom: 22px;
-  font-size: clamp(3.65rem, 7.4vw, 6.9rem);
-  font-weight: 500;
-  line-height: .94;
+  max-width: 13ch;
+  margin-bottom: 18px;
+  font-size: clamp(2.85rem, 4.7vw, 4.9rem);
+  font-weight: 560;
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -600,7 +605,7 @@ h1 span {
 
 @media (max-height: 760px) and (min-width: 941px) {
   .site-frame {
-    margin-top: 22px;
+    margin-top: 0;
   }
 
   .site-header {
@@ -630,7 +635,7 @@ h1 span {
   h1 {
     max-width: 13ch;
     margin-bottom: 18px;
-    font-size: clamp(3.2rem, 6.2vw, 5.35rem);
+    font-size: clamp(2.85rem, 5vw, 4.65rem);
   }
 
   .hero-lede {
@@ -662,8 +667,12 @@ h1 span {
 }
 
 @media (max-width: 940px) {
-  .site-frame,
   .page-footer {
+    width: min(100% - 28px, var(--max));
+  }
+
+  .site-header,
+  .hero {
     width: min(100% - 28px, var(--max));
   }
 
@@ -715,12 +724,11 @@ h1 span {
 
 @media (max-width: 640px) {
   .site-frame {
-    margin-top: 14px;
+    margin-top: 0;
   }
 
   .site-header {
     min-height: 72px;
-    padding: 0 16px;
   }
 
   .brand {
@@ -749,9 +757,9 @@ h1 span {
   }
 
   .hero {
-    margin: 0 8px 18px;
+    width: 100%;
+    margin: 0 0 18px;
     padding: 42px 18px 48px;
-    border-radius: 20px;
   }
 
   .hero-logo {
@@ -779,7 +787,7 @@ h1 span {
   h1 {
     max-width: 100%;
     margin-bottom: 20px;
-    font-size: clamp(2.58rem, 12.5vw, 3.25rem);
+    font-size: clamp(2.25rem, 10vw, 3rem);
   }
 
   .tool-strip,
